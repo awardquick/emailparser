@@ -1,0 +1,213 @@
+Delivered-To: aaronmwq@gmail.com
+Received: by 10.2.132.141 with SMTP id f13csp1612131jai;
+        Sun, 11 Feb 2018 20:18:34 -0800 (PST)
+X-Google-Smtp-Source: AH8x226wp3bjguxjDi7TGzvRnPJ6sjrOYhLCG7eN3T904oSX6WeMiseHt83ERBL0THq4D6DSuMNg
+X-Received: by 10.159.58.216 with SMTP id q24mr10033332uag.63.1518409114896;
+        Sun, 11 Feb 2018 20:18:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1518409114; cv=none;
+        d=google.com; s=arc-20160816;
+        b=k04bq38/7RkSjtTDE2sBTKPJfcUNah06plAAz+yV1cP90r2yBR/99PIAIWjxI4mZWs
+         rPWLXODVmw2vWbn/EGnVkTP/ctuN1HMvn/EFng6ySN6/eQqHLE3S+MvBGr24HKLhKdEX
+         8eFW6kYgFbr12+bnY02HhyOcC7mPB8IUmXukSuTrmNes4q88ACys8/JqgSYW/dNM0mK+
+         kY9WkHA7HkPsV5ldY6mGVwYEH2gTYeEEl70qJMS4hb82MJGpZn64+uaj9fDWFo65CR8s
+         OTgxUoRadVlzgbWngnrOXtZ8lsTBsYpY18aT2hoVFBhY26ZXggX8icuOG+FMtaKpV2rd
+         HYYQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:from:subject:to:content-transfer-encoding
+         :content-disposition:mime-version:date:dkim-signature:dkim-signature
+         :arc-authentication-results;
+        bh=Ms+OU/Wl82H+/inVRinu4TLta8PDzMEQqJ0664NKpso=;
+        b=skKPjrudYkU8eAnFUPKARwbecWY186KHXwemgqQI+UqgoUTxvR1BfVal/orl4tephX
+         ZgYHooYQvELY5kFtv6vxjie4FXppvrFDUTXJhB5ZgFY5kDPiOw5FN5mZtJjwuBG7l2f6
+         J0DoR+vajoO7Tn3rG3r85yF6EVLTYvxdBvtowxZXiHiqEjhjqe1JgV9NxQlNK+nZMygt
+         cAtPXHrl5u6jiWM4zJAVECQpyp+W9WJntR8RyxAYgrP9UPZ5h5C7yRaT9/YyeUR3qHOS
+         PMN46fWZ4j6nzuh1Zl8j42AF8nPXAWLj7rPU2D9fNP89XHjZQ5Wo3h9GbNT99ErXtqnI
+         CSVA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sendgrid.ziprecruiter.com header.s=smtpapi header.b=uL8fYDPk;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=FnX+eg1q;
+       spf=pass (google.com: domain of bounces+1349816-754c-aaronmwq=gmail.com@sendgrid.ziprecruiter.com designates 167.89.34.219 as permitted sender) smtp.mailfrom=bounces+1349816-754c-aaronmwq=gmail.com@sendgrid.ziprecruiter.com;
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=ziprecruiter.com
+Return-Path: <bounces+1349816-754c-aaronmwq=gmail.com@sendgrid.ziprecruiter.com>
+Received: from o1678934x219.outbound-mail.sendgrid.net (o1678934x219.outbound-mail.sendgrid.net. [167.89.34.219])
+        by mx.google.com with ESMTPS id 21si2116945uaq.404.2018.02.11.20.18.34
+        for <aaronmwq@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 11 Feb 2018 20:18:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+1349816-754c-aaronmwq=gmail.com@sendgrid.ziprecruiter.com designates 167.89.34.219 as permitted sender) client-ip=167.89.34.219;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sendgrid.ziprecruiter.com header.s=smtpapi header.b=uL8fYDPk;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=FnX+eg1q;
+       spf=pass (google.com: domain of bounces+1349816-754c-aaronmwq=gmail.com@sendgrid.ziprecruiter.com designates 167.89.34.219 as permitted sender) smtp.mailfrom=bounces+1349816-754c-aaronmwq=gmail.com@sendgrid.ziprecruiter.com;
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=ziprecruiter.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; 
+	d=sendgrid.ziprecruiter.com; 
+	h=mime-version:content-type:content-transfer-encoding:to:subject:from; 
+	s=smtpapi; bh=TOrbNNekccPuFirkaxODgQLq12c=; b=uL8fYDPkV++h6gbeXt
+	tnV7Nr7mINevo0zFvhaGHPMPRHWT2XYBMvGAayZ/TrF+s1AztnablrTilA4a2dnN
+	P4/nMaW72DL3rQfRQanbQTOhzqir7Oq3SQ1dQW+hEW9AzEjA6bHBV2tmWx0nuxuI
+	7uH59VFpCjYdEOMUqRvqy0z1g=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=mime-version:content-type:content-transfer-encoding:to:subject:from:x-feedback-id; 
+	s=smtpapi; bh=TOrbNNekccPuFirkaxODgQLq12c=; b=FnX+eg1qxgUscVddZa
+	nccxBoTxhhGHXQlHlj3fPHVODahGgFmnvIKY7/HcrmKy1xU2Ui6G9ofu7FJIxfeP
+	WqiDFk7kA/bHPOsYYE8vrSjWVsYcI7DSalzkgSKfs5AjPe6tpq/QB8hsP7vjZVeE
+	e1dxqlRsvWJOS2r68nX75wB+Q=
+Received: by filter0613p1las1.sendgrid.net with SMTP id filter0613p1las1-10737-5A811599-8
+        2018-02-12 04:18:33.587789553 +0000 UTC
+Received: from zipalerts.com (ec2-52-23-117-207.compute-1.amazonaws.com [52.23.117.207])
+	by ismtpd0004p1iad1.sendgrid.net (SG) with ESMTP id 7672jYNlT8iiCPT6D1sM3g
+	for <Aaronmwq@gmail.com>; Mon, 12 Feb 2018 04:18:33.460 +0000 (UTC)
+Date: Mon, 12 Feb 2018 04:18:33 +0000 (UTC)
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+To: "Aaron Ward-Quick" <Aaronmwq@gmail.com>
+Subject: Aaron, you have the right background for this job
+From: "Phil" <phil@ziprecruiter.com>
+Message-ID: <7672jYNlT8iiCPT6D1sM3g@ismtpd0004p1iad1.sendgrid.net>
+X-SG-EID: YaecmCafK21cphZMyShk80xT1CR3hMa1lrc1pMnHg3YmA7inXMryabHnsHvZTZPzgqI1Wrb5RJKw1V
+ Y56nr+WP2yXBM2b5tjjKIuIsz+cuuVaFoYGnt4dk6Mh4Wx9xtHdBjKKxCI3PKj2BlS0KkwacTPEgru
+ jv3ZvN5ezOAtFQBr1NIkbz4BxzXAVAAuvlHvk9/Bay8nxoSPrdZs9M75Yg==
+X-SG-ID: trnf54TTjAb91d6Ywfb3bsGyNTMPJCUZl1AaBwVAVc4MbIBtFGOtKVU508O99vCvBySXPPAlEmXdw3
+ PoRe4zBZncTB3+WUgTcul52a//j37jMn/xOEpH0OwZ8Od9WZj7iezldcpsxPuGnrz/dqgYQw6g1o0J
+ HM9VH2uHvUkhQ/fC7D5hGOPZQXOD+PcFCxuqRKiLcnG8IzV8llHVOv4E0l9hRAChJQvYJZkJqzT9nx
+ g=
+X-Feedback-ID: 1349816:eGDQMyIZaWn90IfJZhueBWY695q58j5mCmtjWrOdLLk=:eIYLPfWSgHHxNsK1bOWJHziij72/V4XXg+zIUbInVMxMux7eZPzBcmmVZep6OTz3:SG
+
+
+
+<html>
+<head></head>
+<body>
+
+<span style=3D"font-family:Arial,sans-serif;font-size:15px;line-height:1.4;=
+">
+
+Hi Aaron,<br><br>
+
+I <a href=3D"https://www.ziprecruiter.com/clk/gemaire-26f6cdf1-php-develope=
+r-a7a239d0?clk=3DyVUogNhhb99K1hMxt5UWCdT6Gy5zpUz-fwf11qJXedwam_U5vqJS5aYtQV=
+MhPHVVfchWHt1Aytv3sJX83fcNLP3JXv6p4T3ExacM6zGMwwDHlwgoHkYb4oXgkAFx7BvQmrVrt=
+l03FPITjYek7TzkRpHpbTjw_y3ohLX68jaArmR1wSoZU4dQmyklzhUoj_mXMtfoM6vfHWStr62J=
+uZODRUhqV6GuNMEnO9DvtQl-RccMDh7jrroq4h0Vvy12TGiTnuam-z_5yF4cF_WGl4Fk0g5Qw6s=
+7yyvnn6DqojPDe9jU1vXfRNjd12qkXtYgVXctz17g0QcALWrpWWW2SRIhjvz6UUquX6gxVZj4pA=
+yV4nizvHxay89RxwLnSi_q5r3Up-YpucJygEKk4sfEbvtsLWJYsARw0q0eMjXnCL8W8WOQR3zy7=
+E0FooR6utKpN5IniB80I0YBc03HNmHzy594cLU5op-iQBvdQzgaBQbBysa3BCRdrgHKC6fQOzHn=
+Wz87DXoloutStL3XxSSjlT0aBcoDfiyMhaYXT5aNZ8XuxiSg25byhPb2W_i_AdhDkh0N5eM53BW=
+YMbsRgNMG4GjNQLhQXcm4eqa5JmVtsADDbXfxDso5H8U58eXmU4OaHBqKBPUzYNxdOMdHPBG1Z7=
+WXTogioixI3Gq9qhSpYQcBnxExJqXnBkOMQG9Z1eV57e6X.c89371c5fd3ac10970b55f68f614=
+5f4b" style=3D"color: #057ed8;" target=3D"_blank">have a job</a> that I thi=
+nk lines up well with your resume.
+It's new, so they don't have many candidates yet.
+Check out the description and hit <a href=3D"https://www.ziprecruiter.com/c=
+lk/gemaire-26f6cdf1-php-developer-a7a239d0?clk=3D9ts4I6XAGb-Bq35-3CmHBTSvdZ=
+YyZtOmpJqeHHJ4Ir_V_eC9X6wwb7KlGOAh2u-YPLXgmBuXu32jV9Ie_-8JdKmqHLIS3wW4U7IQ_=
+yQ3F81YxaqeBOIWUnu4c12u6jxEYpvP2oPR2CLQng0Fm6cEiBiJy-SnRWD_NIANm7iYaX1aGwxe=
+xmQekeSBGXN1GFmM_vD6VpJdn0Z5kjx6pGVZcae9yNBG8aVeJCak_HuM0PahQxgCwsLF-rnNvgb=
+gGrT80hqgb5_zpBPpwjkybk6sR9f6diEdtA80tkhY1vnlI2jxkVBYSev2AVf7Yk2EveU8g0LMGB=
+Z7MW2fRPnHPBzsEy2hFK5DRg7u0a5bXZALhW6paNnaWKkH6x7WBbkzq8A0fxFQhP0IxwPv3yIdn=
+LT59Pfhq8VsBshRg3v9kvlJAc3E8IGjUrd9jdhk2F2tyM72X0odCqPtOImxAgng0MQFxtBLs8p_=
+e8SBbf0KfB2Xn1huG7CRykBTfAJB1xqY__fYMpDLMhVChgHmvzvHBKNeVrzkzPaoZ0Z32JK1jt1=
+he9jDGdjiqHJxdYp05bzy2LCqdEjFiR5gIKI6xoVmTatsx2N2npt3aVW9wW0FFzExd08Z5i9G1U=
+q-Pg2Lqzla2s-x00kDDxQFn2E_eACPb2LFpJIHASHNUpjYG1zFC2zDXgZT0_Zyz8MM_MmlFKLk7=
+W0Mw3e_vrc9eTS_99KkWK8jog.3016a3f208ad3095aa3846916bab1dee" style=3D"color:=
+ #057ed8;" target=3D"_blank">"1-Click Apply"</a> if you like what you see.
+<br><br>
+
+=20=20
+
+  <span style=3D"font-weight:bold;">PHP Developer</span> - Gemaire - Deerfi=
+eld Beach, FL  <br>
+=20=20
+      <div style=3D'font-size:13px;'>About Gemaire : As the leading edge of=
+ a National Top 10 HVAC Wholesaler, Gemaire.com is in the unique position o=
+f having a large existing business to serve as we scale our B2B business di=
+gitally. Gemaire.com is an integral part of the longterm strategy of Gemair=
+e and is already contributing substantially to the business. =C2=A0As a mem=
+ber of the team you will be responsible fo...</div>
+    <a href=3D"https://www.ziprecruiter.com/clk/gemaire-26f6cdf1-php-develo=
+per-a7a239d0?clk=3DcE_4k3PvcI1Of4LKqqSTt12vo-wz1PYDYt1wdkRMSV1gH1XFDS0_QSmA=
+fDWwmQ-p8zhllQ_tQ8Izb1JQ6OTaigPicBSU1ZSIZOHK2rDBbdf72t7n-CgJK81g4JSVxo5_kZ3=
+Q4HEKvIIAZE7AAzu8NSDF_of-gfJlLI1G4XHKuairoVOEExLva7B6R-EQQXUMTtGhCFr9JKdEwP=
+X5oFNIk2ALmrg7aX4IQ5MzSRj6vxk3re42NdTI_xOuBVoqpYBX1Hm-ptKbUOSFqI99danZ-ZAl1=
+QmZLkuhWnVXRg-MFo77FgQd08tt7lgMm9Gq8Rcuc8TBqn_EwKIBlTuJbE0Q6hWnnj-sGpMtdDpO=
+ymF8UItDvSosGQkfoVbkK0t5Ub6EPPFNAdjg3xh-qXeDzSvTNLdJhU9L-03VKuAKdl33aWPEQqq=
+Df_px_lmFp3MlYgCU4s-3XBfRDK3zcWpYgYtJsihE5zmtv9SgUDsNHCSeCpRLzjUS-ujrnT7aDP=
+Y3EwCO0YDeRjIa6KtIXoXDvH6oHgOUUtygGA5P6AgkWrPBqsgiiDM3o33yy5VpTbsKTT-clhIZs=
+SoR5b-su53obTaZhEQnLjqlePSXaKE9WNbzKl8974lgU3SaIb7NFHzuE1dcrzvlYlE1W3-NVa85=
+2Sk7ZsvVabNhKqTcGxBZ-qIBf0z0bXO9h7P8yC70DNgXaWep.26ac96302603423dd5cf5e9ca6=
+65d725" style=3D"color: #057ed8;" target=3D"_blank">View Details</a>
+      | <a href=3D"https://www.ziprecruiter.com/clk/gemaire-26f6cdf1-php-de=
+veloper-a7a239d0?clk=3DIKw-yzV6bVZMdXnVX7uqBk38vRYtw_8LEqvoYgjYfG4P-Berz04u=
+nO_SqQKrMHTBegnRdO3QhS23J8A_qAQ2Zg2GRQSOuuvQKA8mnuYVBa1WDcWM82NWcP3jIHwDkrj=
+VlesIgcYBoUMhsPTCIdcPnalCl6_8TFCd-pW7dDSYEzp2Sgxi825UxhQDAQU1XaLlP-NXDQRRqU=
+LP0LHRPaDzFGtnUT5r2SyepCdyWol56JZIip2uqVPRJjk8n0YyLfM8cImPwolEvvSOhDgkAzMlc=
+6rDJ4973uZkOGxpt4ThXgU2uEMHZR92_fHXjJaDpcA0EZk4uvd4oNHL1ocTyw74zSJUjYSRURsz=
+IBN8_ObNWfy9i0bAvjQXzT37UYmoI1baKyju9ExcRDx-PPMBLfJh3MvLUzFjxX5MUNE0L_V1Fhd=
+CIhf_uQR9KdPkybd3RzwdgukdBdyScmYnPhl-FB7p_PnbX3bFAEoxaxfLhkwexMjU2YPQro1uXv=
+-dePQBoPI41Lj0sNagjJLcQ5I7FWyvnmwIjyAuIF-DO5OyDRbXzGQT97URk_WeTHzPx_ib6XMho=
+ToJdotbVNZuyCidt6iALOPCkZToY5pFhSOzWgxFI7dswUJP0qPL0MMs_46poHcATDmo0wG7SMmu=
+2vvwf3sHJQ-vN0K0ViKdFQ3M50r2UsazMyqsnanWAupxXgk3bW1rtvYcpeo-nutwNzgKVz3hmw.=
+eaf6f95cb293761a3dbe116cefee7077" style=3D"color: #057ed8;" target=3D"_blan=
+k">1-Click Apply</a>
+=20=20
+
+    <br>
+  <br>
+=20=20
+
+(Is this job a good match? If not, please <a href=3D"https://www.ziprecruit=
+er.com/candidate/suggestion-feedback/a7a239d0/378f60f1/C9C30438-0FAB-11E8-8=
+5E8-C45CC9EFFE37/wA0M_Bnj85JLdEwm6OJuKED4bF8?qmm=3D60bec7d7&amp;source=3Dma=
+gic5-candidate-auto-send" style=3D"color: #057ed8;" target=3D"_blank">let u=
+s know so we can improve our results.</a>)
+<br><br>
+Regards,<br /><br />
+Phil - Job Seeker Advocate<br>
+
+<a href=3D"https://www.ziprecruiter.com" target=3D"_blank" title=3D"Sign In=
+ to ZipRecruiter" style=3D"color:#057ed8;"><img src=3D"https://www.ziprecru=
+iter.com/zrs/f5bd79b6/img/ziprecruiter-logo-150px.png" alt=3D"ZipRecruiter"=
+ style=3D"display:inline-block"/></a>
+<br>
+<a href=3D"https://www.ziprecruiter.com" style=3D"color:#2f3639;text-decora=
+tion:none" target=3D"_blank">401 Wilshire Blvd., 11th Floor, Santa Monica, =
+CA 90401
+</a>
+<br><br><br><br>
+
+<span style=3D"font-size:13px">If you&#39;d prefer not to receive any more =
+emails like this from us you can easily <a href=3D"https://www.ziprecruiter=
+.com/candidate/notification-unsubscribe-confirm/378f60f1/5c3a44af/_v3u_b36b=
+545cec3b487d4f3794e57bd73c54f041b51d1569d0b9da993439f0b7acf1/1521087513/?so=
+urce=3Dmagic5-candidate-auto-send" style=3D"color: #057ed8;">unsubscribe</a=
+>.</span>
+
+<img src=3D"https://www.ziprecruiter.com/pxl/8_i5cCY8fWAEiTlDX6m4spvpUkDZih=
+t_81UTUy308ycHIFfOqwYjS7i3iL15aOLscrUT7lT0Nuhl2NS3Ih5VbNAlqrAxSPkAQcgU2AUo9=
+hwA9rA-w5EFL7OSg04N99AWyvcHpv8uCKAjo0xnrXyYGXOHgrw2LueDIQftAsyeOFvDiVe7IpI9=
+OKuR9h4VS_bEY5MwyfoJodghBrp77Y1qvb0f6kaSNX1Dctmimv15SiXBeffPw57e2odnrTNOnSS=
+Jffy8CYsTAFCWojGn9YbxyGuIwBl7y0FJJDDPDAqFULOW9D4tdNxy0Xlcv1AkAT9svCfj4Zo7xm=
+920KuELWLBjMbG-s0SSnMabocwmbsX_EA.691582b873446a840415e1bf08819c43" width=
+=3D"1" height=3D"1" alt=3D"" />
+</span>
+
+
+<img src=3D"http://tr.ziprecruiter.com/wf/open?upn=3D0tYODlLPL8upGq2PlVRuk9=
+gIxdcsBwHzKRcZMRqBLz1zQdojWj69M8uMxgM4eVpRlcwXP1YalS-2FxAZ2LvWyyz1tE9HfKRjt=
+-2F-2FNVkS7KFKT7cYrSNRyOP8fjmB81pnQLbWaf9wPWMb8dxl8e5ShXpE8MSK9pcSQd2lHPKTG=
+r1n2GTUVXJyIi8rfA0VuVsW6um8sVeDdq4Rd7oP01MFj-2BiX96HAXnBoyY2ARehAx-2B9To5aF=
+HncjITaOH0XWx4lkXzQekOmyUN931LJjMU8coVw0p7kxULOMOHwwovvkhSNF6JK1-2BdJPz-2Bv=
+mEOAdDhulZSG7ORPK13xTiDgn7e5OwO-2Bm9Wl6Fcm5c6dDbWLV0jMck9rYwWSjP37HVTu5Lbxz=
+w-2BfFjB4lKkP9GqbZ6ZDK3LoIwItoIAAU1u7GfzxxBQzQrdiHN1anlsD6qCyRfbMIoltL7co2c=
+rwl01Fr3LLlQo2Vw-3D-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" styl=
+e=3D"height:1px !important;width:1px !important;border-width:0 !important;m=
+argin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important=
+;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !import=
+ant;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
