@@ -59,7 +59,7 @@ end
 
 
 ##declare a new instance of EmailParser
-new_email = EmailParser.new('FreshLines.txt')
+new_email = EmailParser.new('Your File Name Here')
 
 
 new_email.readfile
